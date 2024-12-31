@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Modern Blog</title>
+    <link rel="stylesheet" href="css\style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to My Blog</h1>
+        <p>Your daily dose of knowledge and inspiration!</p>
+        <nav>
+            <a href="#" onclick="filterPosts('')">All Posts</a>
+            <a href="#" onclick="filterPosts('Tech')">Tech</a>
+            <a href="#" onclick="filterPosts('Life')">Life</a>
+            <a href="#new-post">Create Post</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <h2>Explore, Learn, Share</h2>
+            <p>Discover the latest updates and trends in tech and lifestyle. Share your thoughts with the community!</p>
+            <button onclick="document.getElementById('post-title').focus()">Start Writing</button>
+        </section>
+
+        <!-- New Post Section -->
+        <section id="new-post">
+            <h2>Create a New Post</h2>
+            <form id="post-form">
+                <input type="text" id="post-title" placeholder="Enter Post Title" required>
+                <textarea id="post-content" placeholder="Write your content here..." required></textarea>
+                <select id="post-category">
+                    <option value="Tech">Tech</option>
+                    <option value="Life">Life</option>
+                </select>
+                <button type="submit">Publish Post</button>
+            </form>
+        </section>
+
+        <!-- Blog Posts Section -->
+        <section id="posts">
+            <h2>Latest Posts</h2>
+            <div id="post-container"></div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 My Blog | Designed with ❤️</p>
+        <p>Follow us: 
+            <a href="#" title="Visit our Twitter">Twitter</a> | 
+            <a href="#" title="Visit our Facebook">Facebook</a> | 
+            <a href="#" title="Visit our Instagram">Instagram</a>
+        </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js\script.js"></script>
+</body>
+</html>
